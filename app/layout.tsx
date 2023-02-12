@@ -11,7 +11,7 @@ const Layout = ({ children }: Props) => {
   return (
     <html>
       <head />
-      <body>{children}</body>
+      <body className={`${oxanium.className}`}>{children}</body>
     </html>
   );
 };
