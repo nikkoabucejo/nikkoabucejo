@@ -9,7 +9,7 @@ type Props = {
 
 const Layout = ({ children }: Props) => {
   return (
-    <html>
+    <html lang="en">
       <head />
       <body className={`${oxanium.className}`}>{children}</body>
     </html>
