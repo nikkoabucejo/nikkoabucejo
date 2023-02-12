@@ -1,4 +1,7 @@
 import "@/core/styles/globals.css";
+import { Oxanium } from "@next/font/google";
+
+const oxanium = Oxanium({ subsets: ["latin"] });
 
 type Props = {
   children: React.ReactNode;
