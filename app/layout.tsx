@@ -1,5 +1,5 @@
 import "@/core/styles/globals.css";
-import { Oxanium } from "@next/font/google";
+import { Oxanium } from "next/font/google";
 
 const oxanium = Oxanium({ subsets: ["latin"] });
 
