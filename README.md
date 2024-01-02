@@ -5,31 +5,20 @@
     alt="Profile visitor" />
 </a>
 
-<div>
-  <h3>
-    Hello!, I am
-    <a target="_blank" href="http://www.nikkoabucejo.com">Nikko Abucejo</a>
-  </h3>
+<h3>
+  Hello!, I am
+  <a target="_blank" href="http://www.nikkoabucejo.com">Nikko Abucejo</a>
+</h3>
 
-  <p style="font-size: medium">
-    I am a Full Stack Software Engineer from <b>Philippines</b>
-  </p>
+<p>
+  A dedicated Software Engineer, driven by a lifelong passion for technology. From a young age, my fascination
+  with software and technology evolved into a fulfilling career and a
+  cherished hobby. I thrive on the constant evolution of the tech world,
+  always eager to explore new possibilities and contribute to the
+  ever-changing landscape of software development.
+</p>
 
-  <div>
-    <a href="http://www.nikkoabucejo.com" target="blank">
-      <img
-        src="https://img.shields.io/badge/Website-DC143C?style=for-the-badge&logo=medium&logoColor=white"
-        alt="nikkoabucejo" />
-    </a>
-    <a href="https://www.linkedin.com/in/nikkoabucejo" target="_blank">
-      <img
-        src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"
-        alt="nikkoabucejo" />
-    </a>
-  </div>
-
-  <hr />
-</div>
+<hr />
 
 ![Javascript](https://img.shields.io/badge/Javascript-F0DB4F?style=for-the-badge&labelColor=black&logo=javascript&logoColor=F0DB4F)
 ![Typescript](https://img.shields.io/badge/Typescript-007acc?style=for-the-badge&labelColor=black&logo=typescript&logoColor=007acc)
