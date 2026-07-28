@@ -1,0 +1,190 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="1200" height="420" role="img" aria-label="Nikko Abucejo — Software Engineer, Philippines">
+  <title>Nikko Abucejo — Software Engineer</title>
+
+  <!--
+    ┌─────────────────────────────────────────────────────────────┐
+    │  IDENTITY PLATE — nikkoabucejo profile README               │
+    │                                                             │
+    │  Hand-authored. Motion is additive only: the static         │
+    │  composition is complete without it, and                    │
+    │  prefers-reduced-motion turns every animation off.          │
+    │                                                             │
+    │  PALETTE  bg #070a0e · ink #e8f0f6 · dim #75899a            │
+    │           accent #22d3ee · grid #10202b/#17303f             │
+    │  Bump "REV 2026.07" in the title block on revision.         │
+    └─────────────────────────────────────────────────────────────┘
+  -->
+
+  <style>
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+    .sans { font-family: "Helvetica Neue", Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; }
+
+    .rise  { animation: rise 1s cubic-bezier(.2,.75,.2,1) both; }
+    @keyframes rise { from { opacity: 0; transform: translateY(12px) } to { opacity: 1; transform: none } }
+
+    .slide { animation: slide 1.15s cubic-bezier(.16,.9,.2,1) both; }
+    @keyframes slide { from { opacity: 0; transform: translateX(-26px) } to { opacity: 1; transform: none } }
+
+    .d1 { animation-delay: .05s } .d2 { animation-delay: .30s } .d3 { animation-delay: .50s }
+    .d4 { animation-delay: .70s } .d5 { animation-delay: .90s } .d6 { animation-delay: 1.1s }
+
+    .caret { animation: blink 1.08s steps(1) infinite; }
+    @keyframes blink { 0%,50% { opacity: 1 } 50.01%,100% { opacity: 0 } }
+
+    .halo { transform-box: fill-box; transform-origin: center; animation: halo 3.4s ease-in-out infinite; }
+    @keyframes halo { 0%,100% { transform: scale(1); opacity: .28 } 50% { transform: scale(1.6); opacity: .04 } }
+
+    .beam { animation: beam 9s cubic-bezier(.55,0,.45,1) infinite; }
+    @keyframes beam { 0% { transform: translateX(0); opacity: 0 } 10%,88% { opacity: .5 } 100% { transform: translateX(1170px); opacity: 0 } }
+
+    .ring-a { animation: spin 19s linear infinite; }
+    .ring-b { animation: spin 27s linear infinite reverse; }
+    .ring-c { animation: spin 36s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg) } }
+    .ring-a, .ring-b, .ring-c { transform-origin: 944px 188px; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .rise, .slide, .caret, .halo, .ring-a, .ring-b, .ring-c {
+        animation: none; opacity: 1; transform: none;
+      }
+      .halo { opacity: .22 }
+      .beam { display: none }
+    }
+  </style>
+
+  <defs>
+    <pattern id="minor" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M20 0V20M0 20H20" stroke="#10202b" stroke-width="1"/>
+    </pattern>
+    <pattern id="major" width="100" height="100" patternUnits="userSpaceOnUse">
+      <path d="M100 0V100M0 100H100" stroke="#17303f" stroke-width="1"/>
+    </pattern>
+    <radialGradient id="fade" cx="32%" cy="44%" r="80%">
+      <stop offset="0%" stop-color="#fff" stop-opacity=".95"/>
+      <stop offset="60%" stop-color="#fff" stop-opacity=".38"/>
+      <stop offset="100%" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <mask id="gridMask"><rect width="1200" height="420" fill="url(#fade)"/></mask>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity=".17"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="beamGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0"/>
+      <stop offset="45%" stop-color="#22d3ee" stop-opacity=".85"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="frame"><rect x="1" y="1" width="1198" height="418" rx="18"/></clipPath>
+  </defs>
+
+  <!-- ══ SHEET ════════════════════════════════════════════ -->
+  <rect width="1200" height="420" rx="18" fill="#070a0e"/>
+  <g clip-path="url(#frame)">
+    <g mask="url(#gridMask)">
+      <rect width="1200" height="420" fill="url(#minor)"/>
+      <rect width="1200" height="420" fill="url(#major)"/>
+    </g>
+    <ellipse cx="944" cy="188" rx="235" ry="192" fill="url(#glow)"/>
+    <rect class="beam" x="0" y="1" width="2" height="418" fill="url(#beamGrad)" opacity="0"/>
+  </g>
+  <rect x="1" y="1" width="1198" height="418" rx="18" fill="none" stroke="#1e3646"/>
+
+  <!-- ══ RULERS ═══════════════════════════════════════════ -->
+  <g stroke="#17303f" fill="none" stroke-width="1">
+    <path d="M100 1v9M200 1v6M300 1v9M400 1v6M500 1v9M600 1v6M700 1v9M800 1v6M900 1v9M1000 1v6M1100 1v9"/>
+    <path d="M1 100h9M1 200h6M1 300h9"/>
+    <path d="M100 419v-9M300 419v-9M500 419v-9M700 419v-9M900 419v-9M1100 419v-9"/>
+  </g>
+
+  <!-- ══ REGISTRATION MARKS ═══════════════════════════════ -->
+  <path d="M22 44V22h22M1156 22h22v22M1178 376v22h-22M44 398H22v-22"
+        fill="none" stroke="#22d3ee" stroke-width="1.4" opacity=".5"/>
+
+  <!-- ══ IDENTITY BLOCK ═══════════════════════════════════ -->
+  <g class="rise d1">
+    <rect x="64" y="92" width="7" height="7" fill="#22d3ee"/>
+    <text x="82" y="99" class="mono" font-size="11" letter-spacing="4.5" fill="#22d3ee">PROFILE · 001</text>
+    <text x="612" y="99" class="mono" font-size="11" letter-spacing="4.5" fill="#75899a" text-anchor="end" opacity=".8">SHEET 01 / 01</text>
+  </g>
+
+  <g class="slide d2">
+    <text x="64" y="176" class="sans" font-size="62" font-weight="700" fill="#e8f0f6"
+          textLength="536" lengthAdjust="spacing">NIKKO ABUCEJO</text>
+  </g>
+
+  <!-- dimension line -->
+  <g class="rise d3">
+    <path d="M64 204v14M600 204v14M64 211h536" fill="none" stroke="#75899a" stroke-width="1" opacity=".75"/>
+    <path d="M64 211l9-3.4v6.8zM600 211l-9-3.4v6.8z" fill="#75899a" opacity=".75"/>
+    <rect x="244" y="200" width="176" height="22" fill="#070a0e"/>
+    <text x="332" y="215" class="mono" font-size="10.5" letter-spacing="2" fill="#e8f0f6" text-anchor="middle" opacity=".85">me@nikkoabucejo.com</text>
+  </g>
+
+  <g class="rise d4">
+    <text x="64" y="256" class="mono" font-size="19" letter-spacing="7.5" fill="#e8f0f6" opacity=".9"
+          textLength="352" lengthAdjust="spacing">SOFTWARE ENGINEER</text>
+    <rect class="caret" x="428" y="239" width="11" height="20" fill="#22d3ee"/>
+  </g>
+
+  <!-- capability chips -->
+  <g class="rise d5">
+    <g fill="none" stroke="#22d3ee" stroke-width="1" opacity=".42">
+      <rect x="64" y="284" width="111" height="26" rx="3"/>
+      <rect x="185" y="284" width="161" height="26" rx="3"/>
+      <rect x="356" y="284" width="144" height="26" rx="3"/>
+      <rect x="510" y="284" width="94" height="26" rx="3"/>
+    </g>
+    <g class="mono" font-size="10.5" letter-spacing="2" fill="#22d3ee">
+      <text x="78" y="301" textLength="83" lengthAdjust="spacing">FULL-STACK</text>
+      <text x="199" y="301" textLength="133" lengthAdjust="spacing">SYSTEM ARCHITECT</text>
+      <text x="370" y="301" textLength="116" lengthAdjust="spacing">AI ENGINEERING</text>
+      <text x="524" y="301" textLength="66" lengthAdjust="spacing">DESIGNER</text>
+    </g>
+  </g>
+
+  <!-- ══ FIG. 01 — CORE LOOP ══════════════════════════════ -->
+  <g fill="none" stroke="#22d3ee" stroke-width="1.25">
+    <g class="ring-a" opacity=".85">
+      <ellipse cx="944" cy="188" rx="112" ry="38" transform="rotate(-24 944 188)"/>
+      <circle cx="1046" cy="146" r="4.5" fill="#22d3ee" stroke="none"/>
+    </g>
+    <g class="ring-b" opacity=".5">
+      <ellipse cx="944" cy="188" rx="112" ry="38" transform="rotate(46 944 188)"/>
+    </g>
+    <g class="ring-c" opacity=".28">
+      <ellipse cx="944" cy="188" rx="112" ry="38" transform="rotate(104 944 188)"/>
+      <circle cx="838" cy="212" r="3" fill="#22d3ee" stroke="none"/>
+    </g>
+  </g>
+  <circle class="halo" cx="944" cy="188" r="17" fill="#22d3ee" opacity=".22"/>
+  <circle cx="944" cy="188" r="6.5" fill="#22d3ee"/>
+
+  <g class="rise d6">
+    <path d="M986 132l32-28h108" fill="none" stroke="#75899a" stroke-width="1" opacity=".6"/>
+    <circle cx="986" cy="132" r="2" fill="#75899a"/>
+    <text x="1126" y="100" class="mono" font-size="10" letter-spacing="2.4" fill="#75899a" text-anchor="end">FIG. 01 — CORE LOOP</text>
+  </g>
+
+  <!-- ══ TITLE BLOCK ══════════════════════════════════════ -->
+  <g class="rise d6">
+    <path d="M32 336h1136" stroke="#1e3646" stroke-width="1"/>
+    <path d="M32 336h520" stroke="#22d3ee" stroke-width="1.6"/>
+    <g stroke="#1e3646" stroke-width="1" opacity=".85">
+      <path d="M259 346v40M486 346v40M714 346v40M941 346v40"/>
+    </g>
+    <g class="mono" font-size="8.5" letter-spacing="2.6" fill="#75899a" opacity=".85">
+      <text x="32" y="360">SITE</text>
+      <text x="264" y="360">ROLE</text>
+      <text x="491" y="360">LOCATION</text>
+      <text x="719" y="360">ZONE</text>
+      <text x="946" y="360">REVISION</text>
+    </g>
+    <g class="mono" font-size="12" letter-spacing="1.1" fill="#e8f0f6" opacity=".92">
+      <text x="32" y="381">NIKKOABUCEJO.COM</text>
+      <text x="264" y="381">SOFTWARE ENGINEER</text>
+      <text x="491" y="381">PHILIPPINES</text>
+      <text x="719" y="381">UTC+08:00</text>
+      <text x="946" y="381" fill="#22d3ee">2026.07</text>
+    </g>
+  </g>
+</svg>
