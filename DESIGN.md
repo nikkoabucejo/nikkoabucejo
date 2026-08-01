@@ -22,6 +22,9 @@ contract leaves open, and nothing it fixes.
 | Atomic | [themes/ATOMIC.md](themes/ATOMIC.md) | [assets/atomic/](assets/atomic/README.md) | Available |
 | Experiment | [themes/EXPERIMENT.md](themes/EXPERIMENT.md) | [assets/experiment/](assets/experiment/README.md) | Active |
 
+One theme is briefed but not yet written: **ALIVE**, in §6. It joins the table
+when its document exists.
+
 ---
 
 ## 1 · THE SET
@@ -195,3 +198,59 @@ The document must fix everything this contract leaves open:
 - **Extending** — what a fifth surface would have to do to belong to this theme.
 
 Add a row to the Themes table above when the document exists.
+
+---
+
+## 6 · THEME BRIEF — ALIVE
+
+A brief, not a theme. It states the intent for `themes/ALIVE.md`; the document
+itself still has to answer §5 line by line, and it obeys §4 like every other.
+
+**The intent.** Other themes draw an object. This one draws a place that happens
+to contain one. The set should feel inhabited — air, depth, weather, warmth,
+something that was already going on before the page loaded and will keep going
+after. Living, not decorated.
+
+**What it is made of.**
+
+- **Atmosphere** — depth that comes from air rather than from borders: haze,
+  falloff, layers reading at different distances, a sense of somewhere behind
+  the ink.
+- **Ambience** — the slow, quiet, unprompted layer. Drift, breath, glow that
+  pulses on its own long clock. Nothing here demands to be watched, and nothing
+  here carries information.
+- **Motion** — bodies with weight. Things ease, settle, overshoot slightly,
+  come to rest. Nothing moves linearly and nothing snaps.
+- **Creativity** — the theme is licensed to invent. Where the contract is silent,
+  take the strange option over the safe one.
+
+**Source before effect.** This is the theme's hard rule, and it governs the
+entrance above all else.
+
+Nothing may appear before the thing that causes it. Glow, bloom, haze, shadow,
+particles, trails, reflections, resonance — these are *consequences*, and a
+consequence cannot precede its cause. On first render the source arrives first:
+the lamp before its light, the body before its shadow, the mark before its
+shimmer. The effect then blooms out of it, visibly caused by it.
+
+The entrance order is therefore **source → effect → ambience**. Any frame in
+which the light exists and the thing emitting it does not is a defect, not a
+state — including the very first frame, and including the case where the source
+is still fading in. Ambience is the last layer to switch on, and it only earns
+its own clock once the set has settled; during the entrance it does not exist.
+
+The reward for the rule is the entrance itself: the card assembles, and the room
+lights up around it.
+
+**Always surprise.** Each surface should hold one thing that was not asked for
+and could not have been predicted from the other three — a behaviour, a figure,
+a detail that only shows itself on the second viewing or the third. The set
+should reward looking again. A theme that is merely consistent has failed this
+brief; delight is a requirement here, not a bonus.
+
+**What it may not trade away.** Surprise is spent on the still composition and
+the motion, never on the reading. The static frame is still complete on its own
+(§4), the reduced-motion state is still a designed room with the weather turned
+off rather than a stripped one, the accent is still exactly one colour, and every
+card is still legible scaled into a README column. Atmosphere that costs a word
+its legibility is not atmosphere — it is fog.
