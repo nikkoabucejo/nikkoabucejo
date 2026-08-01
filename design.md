@@ -17,7 +17,8 @@ contract leaves open, and nothing it fixes.
 
 | Theme | Document | Assets | Status |
 |---|---|---|---|
-| Atomic | [themes/atomic.md](themes/atomic.md) | `assets/atomic/` | Active |
+| Apex | [themes/apex.md](themes/apex.md) | `assets/apex/` | Active |
+| Atomic | [themes/atomic.md](themes/atomic.md) | `assets/atomic/` | Available |
 
 ---
 
@@ -75,7 +76,7 @@ UI/UX Designer
 **Socials** — one handle across every channel: `@nikkoabucejo` on Instagram,
 Threads, LinkedIn and YouTube, in that order.
 
-**Revision** — `2026.07`. The stamp for the set as a whole. Bump it whenever a
+**Revision** — `2026.08`. The stamp for the set as a whole. Bump it whenever a
 card changes, in any theme.
 
 ---

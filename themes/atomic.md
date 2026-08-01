@@ -158,12 +158,19 @@ status LED; `72 BPM` right-aligned. The trace runs between them on the vertical
 centre.
 
 **The trace.** A real three-beat ECG — P wave, QRS complex, T wave — but nothing
-of it is drawn at rest. Only a lit window travelling the trace head-first is ever
-visible, with a glowing head dot riding the exact same path so the two stay
-locked. The sweep is 2.5s for three beats, which is the 72 BPM the label claims —
-the number is not decorative, it is the actual rate. Beat amplitude is held below
-full so the R spike and the head's glow both clear the frame with air above and
-below. The comet blinks off across the wrap so the reset never pops.
+of it is drawn at rest. The line exists only inside a travelling mask, so all
+that is ever visible is the live head and the tail falling away behind it, with
+a glowing head dot riding the same x the mask does so the two stay locked. The
+sweep is 2.5s for three beats, which is the 72 BPM the label claims — the number
+is not decorative, it is the actual rate. Beat amplitude is held below full so
+the R spike and the head's glow both clear the frame with air above and below.
+
+**The loop.** The mask is a gradient that *repeats* every 936px — exactly one
+sweep of x — opaque at each head and gone 200px behind it. Sliding it one full
+period per sweep leaves the loop with no seam to hide: as one head runs off the
+right, the tail behind it keeps draining out on its own while the next head is
+already entering from the left. Nothing blinks and nothing resets; the head
+alone fades across the wrap, where the trace ends.
 
 Under reduced motion there is no sweep to show, so the otherwise-hidden trace
 stands in as a dim static waveform and the comet and head are removed.

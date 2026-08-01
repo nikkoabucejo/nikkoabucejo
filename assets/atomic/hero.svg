@@ -11,7 +11,7 @@
     │                                                             │
     │  PALETTE  bg #070a0e · ink #e8f0f6 · dim #75899a            │
     │           accent #22d3ee · grid #10202b/#17303f             │
-    │  Bump "REV 2026.07" in the title block on revision.         │
+    │  Bump "REV 2026.08" in the title block on revision.         │
     └─────────────────────────────────────────────────────────────┘
   -->
 
@@ -286,7 +286,7 @@
       <text x="264" y="381">SINCE 2012</text>
       <text x="491" y="381">PHILIPPINES</text>
       <text x="719" y="381">UTC+08:00</text>
-      <text x="946" y="381" fill="#22d3ee">2026.07</text>
+      <text x="946" y="381" fill="#22d3ee">2026.08</text>
     </g>
   </g>
 </svg>

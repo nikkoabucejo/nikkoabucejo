@@ -9,41 +9,53 @@
     │  grid, cyan #22d3ee accent, mono labels, corner marks.      │
     │                                                             │
     │  The trace is a real 3-beat ECG (P wave · QRS · T wave) but  │
-    │  nothing of it is drawn at rest — only the live 170px comet  │
-    │  and the head dot riding the exact path are ever visible.   │
+    │  nothing of it is drawn at rest — the line exists only       │
+    │  inside a travelling mask, so all that is ever visible is    │
+    │  the live head and the tail falling away behind it.          │
+    │                                                             │
+    │  That mask is a gradient which REPEATS every 936px — exactly │
+    │  one sweep of x — opaque at each head and gone 200px behind  │
+    │  it. Sliding it one full period per sweep leaves the loop    │
+    │  with no seam to hide: as one head runs off the right, the   │
+    │  tail behind it keeps draining out on its own while the      │
+    │  next head is already entering from the left. Nothing        │
+    │  blinks, nothing resets.                                     │
+    │                                                             │
     │  Beat amplitude is held to 62% so the R spike and the head's │
     │  glow both clear the frame — 26px of air above, 37px below.  │
-    │  Sweep = 2.5s for 3 beats = 72 BPM, matching the label.     │
-    │  Path length 1156px — dasharray and the ride track below     │
-    │  are both generated from it, so head and comet stay locked. │
+    │  Sweep = 2.5s for 3 beats = 72 BPM, matching the label. The  │
+    │  head rides the same x the mask does, so it can never drift  │
+    │  off the lit edge; it only fades across the wrap, where the  │
+    │  trace ends.                                                 │
     └─────────────────────────────────────────────────────────────┘
   -->
 
   <style>
     .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
 
-    /* comet: a 170px lit window travelling the trace, head-first */
-    .live { stroke-dasharray: 170 1156; animation: draw 2.5s linear infinite, hot 2.5s linear infinite }
-    @keyframes draw { from { stroke-dashoffset: 170 } to { stroke-dashoffset: -986 } }
-    /* blink off across the wrap so the reset never pops */
-    @keyframes hot { 0% { opacity: 0 } 3%,96% { opacity: 1 } 100% { opacity: 0 } }
+    /* one gradient period per sweep: the pattern lands exactly where it
+       started, so there is no wrap to blink over */
+    .run { animation: run 2.5s linear infinite }
+    @keyframes run { from { transform: translateX(152px) } to { transform: translateX(1088px) } }
 
-    /* head rides the path itself: every vertex plus fill so no chord
-       exceeds 18px, keyed by arc length so it tracks the comet exactly */
-    .head { transform: translate(152px, 55px); animation: ride 2.5s linear infinite, hot 2.5s linear infinite }
+    /* head rides the same x the mask does, so the two cannot drift apart.
+       It only fades across the wrap, where the trace ends. */
+    .head { transform: translate(152px, 55px);
+            animation: ride 2.5s linear infinite, cross 2.5s linear infinite }
+    @keyframes cross { 0% { opacity: 0 } 4%,95% { opacity: 1 } 100% { opacity: 0 } }
     @keyframes ride {
-      0%{transform:translate(152.0px,55.0px)} 5.361%{transform:translate(214.0px,55.0px)} 6.98%{transform:translate(232.2px,51.0px)} 8.612%{transform:translate(250.8px,53.6px)}
-      8.995%{transform:translate(255.0px,55.0px)} 10.724%{transform:translate(275.0px,55.0px)} 11.71%{transform:translate(284.0px,62.0px)} 14.91%{transform:translate(296.0px,27.0px)}
-      18.937%{transform:translate(308.0px,72.0px)} 20.788%{transform:translate(321.0px,55.0px)} 23.296%{transform:translate(350.0px,55.0px)} 24.945%{transform:translate(368.1px,49.1px)}
-      26.531%{transform:translate(386.4px,48.3px)} 28.172%{transform:translate(404.8px,52.5px)} 28.75%{transform:translate(411.0px,55.0px)} 33.333%{transform:translate(464.0px,55.0px)}
-      38.695%{transform:translate(526.0px,55.0px)} 40.314%{transform:translate(544.2px,51.0px)} 41.945%{transform:translate(562.8px,53.6px)} 42.328%{transform:translate(567.0px,55.0px)}
-      44.058%{transform:translate(587.0px,55.0px)} 45.044%{transform:translate(596.0px,62.0px)} 48.243%{transform:translate(608.0px,27.0px)} 52.271%{transform:translate(620.0px,72.0px)}
-      54.121%{transform:translate(633.0px,55.0px)} 56.629%{transform:translate(662.0px,55.0px)} 58.278%{transform:translate(680.1px,49.1px)} 59.865%{transform:translate(698.4px,48.3px)}
-      61.505%{transform:translate(716.8px,52.5px)} 62.084%{transform:translate(723.0px,55.0px)} 66.667%{transform:translate(776.0px,55.0px)} 72.028%{transform:translate(838.0px,55.0px)}
-      73.647%{transform:translate(856.2px,51.0px)} 75.278%{transform:translate(874.8px,53.6px)} 75.662%{transform:translate(879.0px,55.0px)} 77.391%{transform:translate(899.0px,55.0px)}
-      78.377%{transform:translate(908.0px,62.0px)} 81.577%{transform:translate(920.0px,27.0px)} 85.604%{transform:translate(932.0px,72.0px)} 87.454%{transform:translate(945.0px,55.0px)}
-      89.962%{transform:translate(974.0px,55.0px)} 91.612%{transform:translate(992.1px,49.1px)} 93.198%{transform:translate(1010.4px,48.3px)} 94.839%{transform:translate(1028.8px,52.5px)}
-      95.417%{transform:translate(1035.0px,55.0px)} 100%{transform:translate(1088.0px,55.0px)}
+      0%{transform:translate(152.00px,55.00px)} 2.273%{transform:translate(173.27px,55.00px)} 4.545%{transform:translate(194.55px,55.00px)} 6.818%{transform:translate(215.82px,54.31px)}
+      9.091%{transform:translate(237.09px,51.08px)} 11.36%{transform:translate(258.36px,55.00px)} 13.64%{transform:translate(279.64px,58.61px)} 15.91%{transform:translate(300.91px,45.41px)}
+      18.18%{transform:translate(322.18px,55.00px)} 20.45%{transform:translate(343.45px,55.00px)} 22.73%{transform:translate(364.73px,49.83px)} 25%{transform:translate(386.00px,48.26px)}
+      27.27%{transform:translate(407.27px,53.43px)} 29.55%{transform:translate(428.55px,55.00px)} 31.82%{transform:translate(449.82px,55.00px)} 34.09%{transform:translate(471.09px,55.00px)}
+      36.36%{transform:translate(492.36px,55.00px)} 38.64%{transform:translate(513.64px,55.00px)} 40.91%{transform:translate(534.91px,52.25px)} 43.18%{transform:translate(556.18px,51.93px)}
+      45.45%{transform:translate(577.45px,55.00px)} 47.73%{transform:translate(598.73px,54.05px)} 50%{transform:translate(620.00px,72.00px)} 52.27%{transform:translate(641.27px,55.00px)}
+      54.55%{transform:translate(662.55px,54.76px)} 56.82%{transform:translate(683.82px,48.55px)} 59.09%{transform:translate(705.09px,49.23px)} 61.36%{transform:translate(726.36px,55.00px)}
+      63.64%{transform:translate(747.64px,55.00px)} 65.91%{transform:translate(768.91px,55.00px)} 68.18%{transform:translate(790.18px,55.00px)} 70.45%{transform:translate(811.45px,55.00px)}
+      72.73%{transform:translate(832.73px,55.00px)} 75%{transform:translate(854.00px,51.18px)} 77.27%{transform:translate(875.27px,53.71px)} 79.55%{transform:translate(896.55px,55.00px)}
+      81.82%{transform:translate(917.82px,33.36px)} 84.09%{transform:translate(939.09px,62.73px)} 86.36%{transform:translate(960.36px,55.00px)} 88.64%{transform:translate(981.64px,51.90px)}
+      90.91%{transform:translate(1002.91px,48.03px)} 93.18%{transform:translate(1024.18px,50.97px)} 95.45%{transform:translate(1045.45px,55.00px)} 97.73%{transform:translate(1066.73px,55.00px)}
+      100%{transform:translate(1088.00px,55.00px)}
     }
 
     .led { animation: blink 2.5s steps(1) infinite }
@@ -74,6 +86,21 @@
       <stop offset="0%" stop-color="#22d3ee" stop-opacity=".55"/>
       <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
     </radialGradient>
+    <!-- one period == one sweep of x (936). Opaque at the head, gone 200px
+         behind it, then flat until the head before it. spreadMethod="repeat"
+         tiles it end to end, which is what makes the loop seamless. -->
+    <linearGradient id="pTailG" gradientUnits="userSpaceOnUse" spreadMethod="repeat"
+                    x1="0" y1="0" x2="936" y2="0">
+      <stop offset="0%" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="78.63%" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="88.5%" stop-color="#fff" stop-opacity=".22"/>
+      <stop offset="95.5%" stop-color="#fff" stop-opacity=".6"/>
+      <stop offset="99%" stop-color="#fff" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#fff" stop-opacity="1"/>
+    </linearGradient>
+    <mask id="pTail">
+      <g class="run"><rect x="-1872" y="0" width="3744" height="110" fill="url(#pTailG)"/></g>
+    </mask>
     <clipPath id="pFrame"><rect x="1" y="1" width="1198" height="108" rx="18"/></clipPath>
   </defs>
 
@@ -105,7 +132,7 @@
   <g fill="none" stroke="#22d3ee" stroke-linecap="round" stroke-linejoin="round">
     <!-- hidden at rest; revealed only for prefers-reduced-motion -->
     <path class="dim" d="M152 55L214 55Q234 47 255 55L275 55L284 62L296 27L308 72L321 55L350 55Q380 41 411 55L464 55L526 55Q546 47 567 55L587 55L596 62L608 27L620 72L633 55L662 55Q692 41 723 55L776 55L838 55Q858 47 879 55L899 55L908 62L920 27L932 72L945 55L974 55Q1004 41 1035 55L1088 55" stroke-width="1.4" opacity="0"/>
-    <path class="live" d="M152 55L214 55Q234 47 255 55L275 55L284 62L296 27L308 72L321 55L350 55Q380 41 411 55L464 55L526 55Q546 47 567 55L587 55L596 62L608 27L620 72L633 55L662 55Q692 41 723 55L776 55L838 55Q858 47 879 55L899 55L908 62L920 27L932 72L945 55L974 55Q1004 41 1035 55L1088 55" stroke-width="1.8"/>
+    <g mask="url(#pTail)"><path class="live" d="M152 55L214 55Q234 47 255 55L275 55L284 62L296 27L308 72L321 55L350 55Q380 41 411 55L464 55L526 55Q546 47 567 55L587 55L596 62L608 27L620 72L633 55L662 55Q692 41 723 55L776 55L838 55Q858 47 879 55L899 55L908 62L920 27L932 72L945 55L974 55Q1004 41 1035 55L1088 55" stroke-width="1.9"/></g>
   </g>
   <g class="head">
     <circle r="16" fill="url(#pGlow)"/>
