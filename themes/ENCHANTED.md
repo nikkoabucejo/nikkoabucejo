@@ -1,6 +1,6 @@
 # THEME — ENCHANTED
 
-One answer to [design.md](../design.md). Enchanted is a **night garden**: every
+One answer to [DESIGN.md](../DESIGN.md). Enchanted is a **night garden**: every
 surface is a piece of ground after dark — turf along its bottom edge, a bramble
 along its top, vines let down from the canopy, and fireflies drifting through
 the space between, the way a garden carries its own light once the sun is off it.
@@ -369,4 +369,4 @@ named figure; anything shorter is a verge and takes a single left label with a
 firefly, a right-hand bramble only, and no trails.
 
 Note that the contract fixes the set at four cards — a fifth surface is a change
-to [design.md](../design.md) first, and to every theme after it.
+to [DESIGN.md](../DESIGN.md) first, and to every theme after it.

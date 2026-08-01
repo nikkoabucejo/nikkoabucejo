@@ -1,6 +1,6 @@
 # THEME — EXPERIMENT
 
-One answer to [design.md](../design.md). Experiment is a **working laboratory**:
+One answer to [DESIGN.md](../DESIGN.md). Experiment is a **working laboratory**:
 one continuous bench running through all four cards, with real glassware
 standing on it, live fire under it, liquid boiling, distillate dripping and
 vapour coming off the whole thing.
@@ -377,4 +377,4 @@ margin. Anything shorter is a **strip** and takes one left label with a lamp and
 one right-hand reading.
 
 Note that the contract fixes the set at four cards — a fifth surface is a change
-to [design.md](../design.md) first, and to every theme after it.
+to [DESIGN.md](../DESIGN.md) first, and to every theme after it.

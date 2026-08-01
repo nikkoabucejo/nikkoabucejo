@@ -1,6 +1,6 @@
 # THEME — APEX
 
-One answer to [design.md](../design.md). Apex is a **race weekend broadcast
+One answer to [DESIGN.md](../DESIGN.md). Apex is a **race weekend broadcast
 package**: every surface is a *board* — a trackside panel on asphalt, with a
 rumble-strip kerb, direction chevrons, a chequered corner and a timing strip,
 the way a circuit dresses its own information.
@@ -307,4 +307,4 @@ number, a board counter and a chequered corner; anything shorter is a strip and
 takes a single left label with a beacon.
 
 Note that the contract fixes the set at four cards — a fifth board is a change
-to [design.md](../design.md) first, and to every theme after it.
+to [DESIGN.md](../DESIGN.md) first, and to every theme after it.

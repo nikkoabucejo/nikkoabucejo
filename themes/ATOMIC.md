@@ -1,6 +1,6 @@
 # THEME — ATOMIC
 
-One answer to [design.md](../design.md). Atomic is an **engineering drawing set**:
+One answer to [DESIGN.md](../DESIGN.md). Atomic is an **engineering drawing set**:
 every surface is a *plate* — a numbered sheet on a measured ground, with rulers,
 registration marks, dimension lines and a title block, the way a technical
 drawing is laid out.
@@ -245,4 +245,4 @@ numbered sheet, which takes the next number and a sheet counter; anything shorte
 is a strip and takes a single left label with a status LED.
 
 Note that the contract fixes the set at four cards — a fifth plate is a change to
-[design.md](../design.md) first, and to every theme after it.
+[DESIGN.md](../DESIGN.md) first, and to every theme after it.

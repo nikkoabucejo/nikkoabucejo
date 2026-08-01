@@ -17,10 +17,10 @@ contract leaves open, and nothing it fixes.
 
 | Theme | Document | Assets | Status |
 |---|---|---|---|
-| Enchanted | [themes/enchanted.md](themes/enchanted.md) | `assets/enchanted/` | Available |
-| Apex | [themes/apex.md](themes/apex.md) | `assets/apex/` | Available |
-| Atomic | [themes/atomic.md](themes/atomic.md) | `assets/atomic/` | Available |
-| Experiment | [themes/experiment.md](themes/experiment.md) | `assets/experiment/` | Active |
+| Enchanted | [themes/ENCHANTED.md](themes/ENCHANTED.md) | [assets/enchanted/](assets/enchanted/README.md) | Available |
+| Apex | [themes/APEX.md](themes/APEX.md) | [assets/apex/](assets/apex/README.md) | Available |
+| Atomic | [themes/ATOMIC.md](themes/ATOMIC.md) | [assets/atomic/](assets/atomic/README.md) | Available |
+| Experiment | [themes/EXPERIMENT.md](themes/EXPERIMENT.md) | [assets/experiment/](assets/experiment/README.md) | Active |
 
 ---
 
@@ -174,10 +174,10 @@ information or says where information sits.
 
 ## 5 · ADDING A THEME
 
-A theme is a document in `themes/<name>.md` plus a directory `assets/<name>/`
-holding `hero.svg`, `pulse.svg`, `skills.svg` and `socials.svg`. Switching themes
-is switching the four paths in [README.md](README.md); one theme is active at a
-time.
+A theme is a document in `themes/<NAME>.md` plus a directory `assets/<name>/`
+holding `hero.svg`, `pulse.svg`, `skills.svg`, `socials.svg` and a `README.md`
+that renders all four in order. Switching themes is switching the four paths in
+[README.md](README.md); one theme is active at a time.
 
 The document must fix everything this contract leaves open:
 
