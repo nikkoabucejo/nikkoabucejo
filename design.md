@@ -17,7 +17,8 @@ contract leaves open, and nothing it fixes.
 
 | Theme | Document | Assets | Status |
 |---|---|---|---|
-| Apex | [themes/apex.md](themes/apex.md) | `assets/apex/` | Active |
+| Enchanted | [themes/enchanted.md](themes/enchanted.md) | `assets/enchanted/` | Active |
+| Apex | [themes/apex.md](themes/apex.md) | `assets/apex/` | Available |
 | Atomic | [themes/atomic.md](themes/atomic.md) | `assets/atomic/` | Available |
 
 ---
