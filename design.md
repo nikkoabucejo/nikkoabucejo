@@ -17,9 +17,10 @@ contract leaves open, and nothing it fixes.
 
 | Theme | Document | Assets | Status |
 |---|---|---|---|
-| Enchanted | [themes/enchanted.md](themes/enchanted.md) | `assets/enchanted/` | Active |
+| Enchanted | [themes/enchanted.md](themes/enchanted.md) | `assets/enchanted/` | Available |
 | Apex | [themes/apex.md](themes/apex.md) | `assets/apex/` | Available |
 | Atomic | [themes/atomic.md](themes/atomic.md) | `assets/atomic/` | Available |
+| Experiment | [themes/experiment.md](themes/experiment.md) | `assets/experiment/` | Active |
 
 ---
 
@@ -56,7 +57,7 @@ composition of the set.
 The data below is the profile, not the design. It is identical in every theme;
 only its presentation changes. Update it here.
 
-**Identity** — Nikko Abucejo · nikko@copyt.io · Philippines
+**Identity** — Nikko Abucejo · me@nikkoabucejo.com · Philippines
 
 **Titles**, in cycle order. `SOFTWARE ENGINEER` is the anchor: where a theme
 shows one title, it shows this one.
