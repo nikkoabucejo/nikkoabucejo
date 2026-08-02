@@ -244,6 +244,13 @@ timing tower: a position column, a class, and its entries.
 it reading `TECH INDEX · 32`. The right half of the header holds Fig. B. Below,
 the classification occupies the lower two thirds.
 
+**The card is four bands, not two.** Header, air, index, foot. The display word
+sits on 158 and the plate ends at 204; the first stripe starts at 234 and the
+five rows run on a 40 pitch to end at 436 — **30px of air under the plate, 14px
+between rows, 74px of foot.** A board that ends flush with its own edge has no
+composition, only contents; and a foot bought by shoving the index up under the
+header has simply moved the crowding, not cured it. Both edges are designed.
+
 **The clock.** The contract's one-cause rule, realised as a sweep crossing the
 board in 7s. Because the sweep leans 8° like everything else, it reaches a point
 at `x + y · tan 8°`, not at `x` — that effective coordinate is quantised into 24

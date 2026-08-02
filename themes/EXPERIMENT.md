@@ -281,9 +281,19 @@ it. The name is what makes the entry legible and it is never abbreviated away.
 **Composition.** Header mirrors the hero: `SHELF · 32 REAGENTS` with a lamp,
 `RIG II / II` at `x=612`, `FIG. B` captioned at the right margin, the word
 `REAGENTS` in 48px sans, the same measure beneath it carrying
-`32 REAGENTS · 5 SHELVES · ONE HEAD`. Below, five shelf rails at a 54 pitch, the
+`32 REAGENTS · 5 SHELVES · ONE HEAD`. Below, five shelf rails from y=256 at a 46 pitch, the
 group name in the left margin of each, and seven bottle positions on a 136.5
 pitch.
+
+**The card is four bands, not two.** Header, air, shelf, foot — and all four
+have to be there. The measure line ends at 180, the first bottle stands at 216,
+the rails run 256 to 440 and the posts foot at 446: **26px of air under the
+header, 9px between shelves, 64px of foot.** Buying a foot by shoving the shelf
+up under the header is not spacing, it is moving the crowding somewhere else.
+
+The head's stops **are** the rails, so re-pitching the shelf re-times the
+machine with it — `@keyframes gy` carries the same five numbers the rails do,
+less the 46px the carriage rides above them.
 
 **One cause, every effect — the dispensing head.** A gantry hangs between two
 posts bolted to the bench and carries a single head: a carriage running on
